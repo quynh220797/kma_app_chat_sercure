@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.UserProfileActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/scan_qrcode"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/qr_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.kma.securechatapp.utils.misc.CircularImageView
+
+        android:id="@+id/profil_avatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/alert_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/profil_avatar"
+        tools:layout_editor_absoluteX="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/profile_name"
+                android:textSize="28dp"
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_profile_name"
+                android:textAlignment="center"
+                android:textSize="28dp"
+                android:maxWidth="400dp"
+                android:minWidth="50dp"
+                android:text="Name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/btn_edit_name"
+                android:src="@drawable/ic_create_black_24dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_location_on_black_24dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:id="@+id/profile_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="address"></TextView>
+
+        </LinearLayout>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:src="@drawable/ic_call_black_24dp"
+              android:layout_width="20dp"
+              android:layout_height="20dp"/>
+          <TextView
+              android:id="@+id/profile_phone"
+              android:text="+84852120219"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/profile_action"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/info_layout"
+        tools:layout_editor_absoluteX="0dp">
+        <Button
+            android:textSize="13dp"
+            android:width="150dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_button_corners_red"
+            android:id="@+id/profile_btn_add_del_contact"
+            android:text="Add Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:textSize="13dp"
+            android:id="@+id/profile_btn_message"
+            android:width="150dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_button_corners"
+            android:text="Messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Followers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_action" />
+    <View
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="80dp"
+        app:layout_constraintStart_toStartOf="@id/textView7"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        android:layout_height="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
